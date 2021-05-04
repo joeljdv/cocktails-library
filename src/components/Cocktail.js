@@ -1,9 +1,10 @@
 import React from 'react'
+import Cocktails from '../containers/Cocktails'
 
-const Cocktail = (props) => {
+const Cocktail = ({drinks}) => {
     return (
         <div>
-            
+           <li>{drinks.strDrink}</li>
         </div>
     )
 }
