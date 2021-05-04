@@ -4,7 +4,7 @@ export default class CocktailInfo extends Component {
     render() {
         return (
             <div>
-                
+                this is cocktail info
             </div>
         )
     }
