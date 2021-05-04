@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import DrinkInfo from '../components/DrinkInfo'
+import Navigation from '../components/Navigation'
 
 export default class CocktailInfo extends Component {
     state={
@@ -18,9 +20,14 @@ export default class CocktailInfo extends Component {
     }
 
     render() {
+
+        const drink = this.state.drink.map(dr => <DrinkInfo key={dr.idDrink} drink={dr}/>)
+
         return (
             <div>
+                <Navigation/>
                 this is cocktail info
+                {drink}
             </div>
         )
     }
