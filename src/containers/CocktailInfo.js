@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import DrinkInfo from '../containers/DrinkInfo'
 import Navigation from '../components/Navigation'
 
+
 export default class CocktailInfo extends Component {
     state={
         drink:[]

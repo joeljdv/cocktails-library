@@ -1,5 +1,38 @@
 {
-    "drinks": [
-       
-    ]
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Funk and Soul",
+      "image": "https://www.thecocktaildb.com/images/media/drink/qtv83q1596015790.jpg",
+      "ingredients": [
+        "Rum",
+        "Apricot Nectar",
+        "Pomegranate juice",
+        "lemon",
+        "Soda Water"
+      ],
+      "measures": [
+        "2 shots",
+        "1 shot",
+        "1 shot",
+        "Juice of 1/2",
+        "Top"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Brigadier",
+      "image": "https://www.thecocktaildb.com/images/media/drink/nl89tf1518947401.jpg",
+      "ingredients": [
+        "Hot Chocolate",
+        "Green Chartreuse",
+        "Cherry Heering"
+      ],
+      "measures": [
+        "4 oz",
+        "1 oz",
+        "1 oz"
+      ]
+    }
+  ]
 }

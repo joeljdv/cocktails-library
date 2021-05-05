@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navigation from '../components/Navigation'
-import ShowRecipes from '../components/ShowRecipes'
+import ShowRecipes from './ShowRecipes'
 
 export default class MyRecipes extends Component {
 
@@ -23,11 +23,18 @@ export default class MyRecipes extends Component {
         fetch(`http://localhost:3001/drinks/${e.target.id}`, {
             method: 'DELETE'
         })
+        this.deleteRecipe(e)
+    }
+
+    deleteRecipe = (e) => {
+        this.setState({
+            myRecipes: this.state.myRecipes.filter(recipe => recipe.id != e.target.id)
+        })
     }
 
     render() {
 
-        let recipes = this.state.myRecipes.map(recipe => <ShowRecipes myDrink={recipe} key={recipe.id} delete={this.handleDelete}/>)
+        let recipes = this.state.myRecipes.map(recipe => <ShowRecipes myDrink={recipe} key={recipe.id} delete={this.handleDelete} />)
 
         return (
             <div>

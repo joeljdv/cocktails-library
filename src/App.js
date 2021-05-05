@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Cocktails from './containers/Cocktails'
 import CocktailInfo from './containers/CocktailInfo'
 import MyRecipes from './containers/MyRecipes'
+import ShowRecipes from './containers/ShowRecipes'
 
 import React, { Component } from 'react'
 
