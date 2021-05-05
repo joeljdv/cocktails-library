@@ -14,15 +14,15 @@ export default class DrinkInfo extends Component {
                 <br/>
                 <button>Add Favorite</button>
                 <br/>
-                <div className='list'>
-                    <strong>Ingredient:</strong>
-                    <ul>
+                <div className='list'> 
+                    <ul className='ingredients'>
+                        <strong>Ingredient:</strong>
                         {y.map(i => <li>{i}</li>)}
                     </ul>
                 </div>          
                 <div className='list'>
-                    <strong>Measures</strong>
-                    <ul>
+                    <ul className='measures'>
+                        <strong>Measures</strong>
                         {measuresValue.map(m => <li>{m}</li>)}
                     </ul>    
                 </div>      
