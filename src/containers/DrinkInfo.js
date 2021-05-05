@@ -50,7 +50,7 @@ export default class DrinkInfo extends Component {
                     <h2>{this.props.drink.strDrink}</h2>
                     <img src={this.props.drink.strDrinkThumb} className='drink-image'/> 
                     <br/>
-                    <button onClick={this.handleClick}>Add Favorite</button> 
+                    <button onClick={this.handleClick}>Add to recipes</button> 
                 </div>
                 <div className='drink-inst'> 
                    <div className='list'> 
