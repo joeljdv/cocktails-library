@@ -20,6 +20,27 @@ export default class DrinkInfo extends Component {
         })
     }
 
+    handleClick = (e) => {
+        fetch('http://localhost:3001/drinks', {
+            method: 'POST',
+            body: JSON.stringify({
+                id:'',
+                name: this.state.name,
+                image: this.state.image,
+                ingredients: this.state.ingredients,
+                measures: this.state.measures
+            }),
+            headers: {
+               'Content-type':"application/json",
+               "Accept": "application/json"
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+    }
+
     render() { 
       
         
@@ -29,7 +50,7 @@ export default class DrinkInfo extends Component {
                     <h2>{this.props.drink.strDrink}</h2>
                     <img src={this.props.drink.strDrinkThumb} className='drink-image'/> 
                     <br/>
-                    <button>Add Favorite</button> 
+                    <button onClick={this.handleClick}>Add Favorite</button> 
                 </div>
                 <div className='drink-inst'> 
                    <div className='list'> 
