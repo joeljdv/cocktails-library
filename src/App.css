@@ -4,7 +4,8 @@
 
 .drink {
   text-align: left;
-  margin: 30px 0px 0px 30px
+  margin: 30px 0px 0px 30px;
+  width: 50%
 }
 
 .list{ 
@@ -17,5 +18,6 @@ ul.measures {
 }
 
 .instructions {
-  width: 50%
+  width: 59%;
+  text-align: left;
 }

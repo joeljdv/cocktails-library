@@ -25,7 +25,7 @@ export default class DrinkInfo extends Component {
                         <strong>Measures</strong>
                         {measuresValue.map(m => <li>{m}</li>)}
                     </ul>    
-                </div>      
+                </div> 
                 <p className='instructions'><strong>Instructions: </strong>{this.props.drink.strInstructions}</p>
             </div>
         )
