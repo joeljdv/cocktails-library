@@ -15,7 +15,6 @@ export default class DrinkInfo extends Component {
                     <br/>
                     <button>Add Favorite</button> 
                 </div>
-                <br/>
                 <div className='drink-inst'> 
                    <div className='list'> 
                         <ul className='ingredients'>
@@ -27,11 +26,11 @@ export default class DrinkInfo extends Component {
                         <ul className='measures'>
                             <strong>Measures</strong>
                             {measuresValue.map(m => <li>{m}</li>)}
-                        </ul>    
-                        <p className='instructions'><strong>Instructions: </strong>{this.props.drink.strInstructions}</p>
-                    </div>                     
+                        </ul>      
+                    </div>
+                      <p className='instructions'><strong>Instructions: </strong>{this.props.drink.strInstructions}</p>      
                 </div>  
-                
+                             
             </div>
         )
     }

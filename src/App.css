@@ -2,25 +2,13 @@
   width:400px
 }
 
-.drink-info {
-  overflow: hidden;
-  width: 100%;
-}
-
-.drink {
-width: 35%;
-float: left;
-}
-
 .drink-inst {
-  width:30%;
-  float: left;
+    width: 50%
 }
 
 .list {
-  float: left;
+    float: left;
+    width:49.9%
 }
 
-.instructions {
-  width: 100%
-}
+
