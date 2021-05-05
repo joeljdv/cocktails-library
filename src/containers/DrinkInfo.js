@@ -8,25 +8,30 @@ export default class DrinkInfo extends Component {
         let measureKey = Object.keys(this.props.drink).filter(k => k.includes('Measure')).filter(i => this.props.drink[i] !== '' && this.props.drink[i] !== null)
         let measuresValue = measureKey.map(m => this.props.drink[m])
         return (
-            <div className='drink'>
-                <h2>{this.props.drink.strDrink}</h2>
-                <img src={this.props.drink.strDrinkThumb} className='drink-image'/> 
+            <div className='drink-info'>
+                <div className='drink'>
+                    <h2>{this.props.drink.strDrink}</h2>
+                    <img src={this.props.drink.strDrinkThumb} className='drink-image'/> 
+                    <br/>
+                    <button>Add Favorite</button> 
+                </div>
                 <br/>
-                <button>Add Favorite</button>
-                <br/>
-                <div className='list'> 
-                    <ul className='ingredients'>
-                        <strong>Ingredient:</strong>
-                        {y.map(i => <li>{i}</li>)}
-                    </ul>
-                </div>          
-                <div className='list'>
-                    <ul className='measures'>
-                        <strong>Measures</strong>
-                        {measuresValue.map(m => <li>{m}</li>)}
-                    </ul>    
-                </div> 
-                <p className='instructions'><strong>Instructions: </strong>{this.props.drink.strInstructions}</p>
+                <div className='drink-inst'> 
+                   <div className='list'> 
+                        <ul className='ingredients'>
+                            <strong>Ingredient:</strong>
+                            {y.map(i => <li>{i}</li>)}
+                        </ul>
+                    </div>          
+                    <div className='list'>
+                        <ul className='measures'>
+                            <strong>Measures</strong>
+                            {measuresValue.map(m => <li>{m}</li>)}
+                        </ul>    
+                        <p className='instructions'><strong>Instructions: </strong>{this.props.drink.strInstructions}</p>
+                    </div>                     
+                </div>  
+                
             </div>
         )
     }

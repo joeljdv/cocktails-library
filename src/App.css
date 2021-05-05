@@ -2,22 +2,25 @@
   width:400px
 }
 
+.drink-info {
+  overflow: hidden;
+  width: 100%;
+}
+
 .drink {
-  text-align: left;
-  margin: 30px 0px 0px 30px;
-  width: 50%
+width: 35%;
+float: left;
 }
 
-.list{ 
-  float:left;
+.drink-inst {
   width:30%;
+  float: left;
 }
 
-ul.measures {
-  list-style-type: none;
+.list {
+  float: left;
 }
 
 .instructions {
-  width: 59%;
-  text-align: left;
+  width: 100%
 }
