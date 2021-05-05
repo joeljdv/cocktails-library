@@ -19,9 +19,15 @@ export default class MyRecipes extends Component {
         })
     }
 
+    handleDelete = (e) => {
+        fetch(`http://localhost:3001/drinks/${e.target.id}`, {
+            method: 'DELETE'
+        })
+    }
+
     render() {
 
-        let recipes = this.state.myRecipes.map(recipe => <ShowRecipes myDrink={recipe} key={recipe.id}/>)
+        let recipes = this.state.myRecipes.map(recipe => <ShowRecipes myDrink={recipe} key={recipe.id} delete={this.handleDelete}/>)
 
         return (
             <div>

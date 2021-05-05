@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ShowRecipes = ({myDrink}) => {
+const ShowRecipes = (props) => {
     return (
         <div className='recipes'>
-            <h3>{myDrink.name}</h3>
-            <img className='recipe-image' src={myDrink.image} /><br/>
-            <button>Delete</button>
+            <h3>{props.myDrink.name}</h3>
+            <img className='recipe-image' src={props.myDrink.image} /><br/>
+            <button id={props.myDrink.id} onClick={props.delete}>Delete</button>
             <hr/>
         </div>
     )
