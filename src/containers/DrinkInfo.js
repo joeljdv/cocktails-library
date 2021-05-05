@@ -1,12 +1,28 @@
 import React, { Component } from 'react'
-
+   
 export default class DrinkInfo extends Component {
 
-    render() {
+    state = {
+        name: this.props.drink.strDrink,
+        image: this.props.drink.strDrinkThumb,
+        ingredients:[],
+        measures:[]
+    }
+
+    componentDidMount(){
         const x = Object.keys(this.props.drink).filter(k => k.includes('Ingredient')).filter(i => this.props.drink[i] !== '' && this.props.drink[i] !== null)
         const y = x.map(i => this.props.drink[i])
         let measureKey = Object.keys(this.props.drink).filter(k => k.includes('Measure')).filter(i => this.props.drink[i] !== '' && this.props.drink[i] !== null)
         let measuresValue = measureKey.map(m => this.props.drink[m])
+        this.setState({
+            ingredients:y,
+            measures: measuresValue
+        })
+    }
+
+    render() { 
+      
+        
         return (
             <div className='drink-info'>
                 <div className='drink'>
@@ -19,13 +35,13 @@ export default class DrinkInfo extends Component {
                    <div className='list'> 
                         <ul className='ingredients'>
                             <strong>Ingredient:</strong>
-                            {y.map(i => <li>{i}</li>)}
+                            {this.state.ingredients.map(i => <li>{i}</li>)}
                         </ul>
                     </div>          
                     <div className='list'>
                         <ul className='measures'>
                             <strong>Measures</strong>
-                            {measuresValue.map(m => <li>{m}</li>)}
+                            {this.state.measures.map(m => <li>{m}</li>)}
                         </ul>      
                     </div>
                       <p className='instructions'><strong>Instructions: </strong>{this.props.drink.strInstructions}</p>      
