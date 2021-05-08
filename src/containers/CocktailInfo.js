@@ -23,7 +23,7 @@ export default class CocktailInfo extends Component {
 
     render() {
 
-        const drink = this.state.drink.map(dr => <DrinkInfo drink={this.state.drink} key={dr.idDrink} drink={dr}/>)
+        const drink = this.state.drink.map(dr => <DrinkInfo  key={dr.idDrink} drink={dr}/>)
 
         return (
             <div>
