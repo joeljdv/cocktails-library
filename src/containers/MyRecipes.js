@@ -39,6 +39,7 @@ export default class MyRecipes extends Component {
         return (
             <div>
                 <Navigation/>
+                <h1>My recipes</h1>
                 {recipes}
             </div>
         )

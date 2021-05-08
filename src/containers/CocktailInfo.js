@@ -28,7 +28,6 @@ export default class CocktailInfo extends Component {
         return (
             <div>
                 <Navigation/>
-                this is cocktail info
                 {drink}
             </div>
         )

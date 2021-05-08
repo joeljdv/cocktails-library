@@ -1,12 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 const Cocktail = ({drinks}) => {
     return (
-        <Link to={`cocktails/${drinks.idDrink}`}>
+        <NavLink to={`cocktails/${drinks.idDrink}`} exact style={{color:'bisque'}}>
             <div>
                 <li>{drinks.strDrink}</li>
             </div>
-        </Link>
+        </NavLink>
     )       
 }
 

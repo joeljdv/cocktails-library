@@ -1,9 +1,20 @@
+body {
+  background-image: url('https://images.hdqwalls.com/wallpapers/abstract-dark-wood-lo.jpg');
+
+}
+
 .drink-image{
-  width:400px
+  width:400px;
+  border: double bisque 10px
 }
 
 .drink-inst {
-    width: 50%
+    width: 50%;
+    
+}
+
+.drink-info {
+  color: bisque;
 }
 
 .list {
@@ -12,6 +23,28 @@
 }
 
 .recipe-image {
-  width:200px
+  width:200px;
+  border: double bisque 10px
+}
+
+.recipes {
+  margin-left: 20px;
+  color: bisque;
+}
+
+.cocktails {
+  list-style-position: inside;
+  font-size: 20px;
+}
+
+h1 {
+  color: bisque;
+  text-align: center;
+  font-size: 60px;
+}
+
+.header {
+  height: 190px;
+  
 }
 

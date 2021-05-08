@@ -26,10 +26,13 @@ export default class Cocktails extends Component {
 
         return (
             <div>
-                <Navigation/>
-                <h1>Cocktail list</h1>
-                <hr/>
-                {drinks}
+                <div className='header'>
+                    <Navigation/>
+                    <h1>Cocktail list</h1>   
+                </div>
+                <ol className='cocktails'>
+                    {drinks}
+                </ol>  
             </div>
         )
     }
